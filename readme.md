@@ -124,6 +124,12 @@ El último paso de una sesión de `EventStorming` es buscar `aggregates` que est
 
 ![Aggregates](/assets/images/lddd_1211.png) 
 
+### Leyenda
+
+A continuación de muestra la leyenda de las notas adhesivas utilizadas en _EventStorming_:
+
+![Legend](/assets/images/lddd_1212.png) 
+
 
 ## Variantes
 
@@ -137,8 +143,3 @@ Al final de una sesión completa de _EventStorming_, tendrá un modelo que descr
 
 El modelo resultante se puede adoptar como base para implementar un ***domain model*** basado en `events`. La decisión de seguir ese camino o no depende de su `business domain`. Si decide implementar el `domain model` basado en `events`, tiene los límites del `bounded context`, los `aggregates` y, por supuesto, el `blueprint` de los `domain events` necesarios.
 
-### Leyenda
-
-A continuación de muestra la leyenda de las notas adhesivas utilizadas en _EventStorming_:
-
-![Legend](/assets/images/lddd_1212.png) 
