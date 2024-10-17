@@ -151,6 +151,6 @@ A continuación, se muestra una versión completa del `Bounded Context Canvas`.
 ![BCExample](assets/BCCanvasExample.jpg)
 
 ### Miro Version
-A free [MiroHQ template](https://miro.com/miroverse/dps-bounded-context-canvas-for-ddd/) of the Bounded Context Canvas.
+A free [MiroHQ template](https://miro.com/miroverse/category/newly-added/the-bounded-context-canvas) of the Bounded Context Canvas.
 
 
