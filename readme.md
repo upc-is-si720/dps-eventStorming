@@ -5,5 +5,5 @@
 
 ## Bounded Context Canvas
 
-- [Guide Bounded Context Canvas](platform/daos-learning-center-platform-mini-v2402.md)
+- [Guide Bounded Context Canvas](Bounded-Context-Canvas.md)
 
