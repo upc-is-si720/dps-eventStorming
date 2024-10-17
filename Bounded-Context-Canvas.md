@@ -49,167 +49,108 @@ Unas pocas oraciones que describen el por qué y el qué del contexto en `busine
 
 Escribir el `purpose` lo obliga a articular claramente los pensamientos difusos y a garantizar que todos en el equipo estén en la misma página.
 
-Describa el `purpose` desde un `business perspective`; también puede nombrar a los actores clave para quienes el `bounded context` brinda valor.
+Describa el `purpose` desde un `business perspective`; también puede nombrar a los `actors` clave para quienes el `bounded context` brinda valor.
 
 ### Strategic Classification
-How important is this context to the success of your organisation?: 
 
-- core domain: a key strategic initiative
-- supporting domain: necessary but not a differentiator
-- generic: a common capability found in many domains
+**Domain**: ¿Qué importancia tiene este `context` para el éxito de su organización?:
 
-What role does the context play in your business model:
+- **core domain**: una iniciativa estratégica clave.
+- **supporting domain**: necesario pero no un diferenciador.
+- **generic**: una capacidad común que se encuentra en muchos `domains`.
 
-- revenue generator: people pay directly for this
-- engagement creator: users like it but they don't pay for it
-- compliance enforcer: protects your business reputation and existence
+**Business Model**: ¿Qué papel desempeña el `context` en su `business model`?:
 
-How evolved is the concept (see [Wardley Maps](https://medium.com/wardleymaps)):
+- **revenue generator**: las personas pagan directamente por esto.
+- **engagement creator**: a los usuarios les gusta pero no pagan por ello.
+- **compliance enforcer**: protege la reputación y la existencia de su empresa.
 
-- genesis: new unexplored domain
-- custom built: companies are building their own versions
-- product: off-the-shelf versions exist with differentiation
-- commodity: highly-standardised versions exist
+**Evolution**: ¿Qué tan evolucionado está el concepto (consulte Wardley Maps)?:
 
-> For detailed descriptions of genesis, custom built, product, and commodity see [Wardley Maps Evolution definitions](https://twitter.com/swardley/status/989211014485901316/photo/1).
+- **genesis**: nuevo dominio inexplorado.
+- **custom built**: las empresas están creando sus propias versiones.
+- **product**: existen versiones listas para usar con diferenciación.
+- **commodity**: existen versiones altamente estandarizadas.
 
-For help filling in this section of the canvas, see [Core Domain Charts](https://github.com/ddd-crew/core-domain-charts).
+Para obtener ayuda para completar esta sección del `canvas`, consulte [Core Domain Charts](https://github.com/ddd-crew/core-domain-charts).
 
 ### Domain Roles
-How can you characterise the behaviour of this bounded context? Does it receive high volumes of data and crunch them into insights - an analysis context? Or does it enforce a workflow - an execution context? Identifying the different roles a context plays can help to avoid coupling responsibilities.
 
-Check out Alberto Brandolini's [Bounded Context Archetypes](https://medium.com/@cyrillemartraire/collaborative-construction-by-alberto-brandolini-an-archetype-of-bounded-contexts-bea640bbb5b) and Rebecca Wirfs-Brock's [Object Role Stereotypes](http://www.wirfs-brock.com/PDFs/A_Brief-Tour-of-RDD.pdf) for a deeper analysis of this space. The [Model Traits worksheet](resources/model-traits-worksheet.md) contains community-generated examples of roles (model traits was the former name for domain roles).
+¿Cómo puede caracterizar el comportamiento de este `bounded context`? 
+
+- **analisys context**: ¿Recibe grandes volúmenes de datos y los procesa para obtener información? 
+- **execution context**: ¿Impone un flujo de trabajo? 
+
+Identificar los diferentes roles que desempeña un `context` puede ayudar a evitar la duplicación de responsabilidades.
 
 ### Inbound Communication
 
-Inbound communication represents collaborations that are initiated by other collaborators.
+El `Inbound communication` representa colaboraciones iniciadas por otros `collaborators`.
 
 #### Messages
 
-Messages are the information that one collaborator sends to another. There are three types of conversation that can occur between bounded contexts. A request to do something (a command), a request for some information (a query), or notification that something has happened (an event).
+Los `Messages` son la información que un colaborador envía a otro. Hay tres tipos de conversación que pueden ocurrir entre `bounded contexts`. 
+- Un *request* para hacer algo (un `command`), 
+- Un *request* de información (un `query`) o 
+- Un *notification* de que algo ha sucedido (un `event`).
 
-The word message is used in the general sense and not tied to any implementation. No message bus or asynchronous workflow is obligatory. A command, for example, could simply be posting data from an HTML form as a HTTP POST command.
+La palabra `message` se utiliza en sentido general y no está vinculada a ninguna implementación. No es obligatorio ningún *message bus* ni *asynchronous workflow*. Un `command`, por ejemplo, podría simplemente publicar datos desde un formulario HTML como un `command` HTTP POST. 
 
 #### Collaborators
 
-Collaborators are other systems or sub-systems that send messages to this context. They can be other bounded contexts, frontends (web or mobile), or something else.
+Los `Collaborators` son otros *systems* o *sub-systems* que envían `messages` a este `context`. Pueden ser otros `bounded contexts`, *frontends* (web o mobile) o cualquier otra cosa.
 
-If the Bounded Context owns the user interface (e.g. [micro-frontend](https://martinfowler.com/articles/micro-frontends.html)) then the collaborator type is direct user interaction.
+Si el `Bounded Context` posee el *user interface* (por ejemplo, [micro-frontend](https://martinfowler.com/articles/micro-frontends.html)), entonces el tipo de colaborador es la interacción directa del usuario.
 
-![Collaborator types](resources/collaborator-types.jpeg)
+![Collaborator types](assets/collaborator-types.jpeg)
 
 #### Relationship Type
 
-The relationship type between two bounded contexts indicates how the models and teams influence each other. See [Context Mappping](https://github.com/ddd-crew/context-mapping) to learn about relationship types.
+El `Relationship Type` entre dos `bounded contexts` indica cómo los `models` y los *teams* se influyen entre sí. Consulta [Context Mappping](https://github.com/ddd-crew/context-mapping) para obtener más información sobre los tipos de relación.
 
 #### Organising Into Swimlanes
 
-Collaborators can be organised into horizontal swim lanes showing the messages that they send.
+Los `collaborators` se pueden organizar en `swim lanes` horizontales que muestran los `messages` que envían.
 
-![Collaborator example](resources/collaborator-example.jpeg)
+![Collaborator example](assets/collaborator-example.jpeg)
 
 ### Outbound Communication
 
-Outbound communication represents collaborations that are initiated by this context to interact with other collaborators. The same message types and notations apply as inbound communication.
+La `Outbound communication` representa las colaboraciones que se inician en este `context` para interactuar con otros `collaborators`. Se aplican los mismos tipos de `messages` y notaciones que en el `inbound communication`.
 
 ### Ubiquitous Language
-What are the key domain terms that exist within this context, and what do they mean?
+
+¿Cuáles son los términos clave del `domain` que existen en este `context` y qué significan?
 
 ### Business Decisions
-What are the key business rules and policies within this context?
+
+¿Cuáles son las reglas y políticas *key business* dentro de este `context`?
 
 ### Assumptions
-You will never make design decisions having a full knowledge about everything in your domain. Most design happens based on assumptions and it is highly recommended to make them explicit. This can be done in this section of the Bounded Context Design Canvas.
 
-### Verification Metrics 
-Domain Driven Design is about an iterative approach towards modelling and design based on continuous learning. Metrics can help you
-gathering valuable input for those learnings (think about build-measure-learn). Think about metrics that you and your team can define in order to gather learnings if the chosen boundaries of your bounded context are a good fit or not. 
+Nunca tomará decisiones de diseño si tiene un conocimiento completo de todo lo que ocurre en su `domain`. La mayoría de los diseños se basan en `assumptions` y es muy recomendable hacerlos explícitos. Esto se puede hacer en esta sección del diseño del `Bounded Context Canvas`.
 
-You can collect those metrics for instance from:
+### Verification Metrics
 
-- Your CI / CD environments
-- Tools like JIRA
-- From your live systems
+`Domain Driven Design` se trata de un enfoque iterativo hacia el modelado y el diseño basado en el *continuous learning*. Las `Metrics` pueden ayudarlo a recopilar información valiosa para esos *learnings* (piense en *build-measure-learn*). Piense en las `metrics` que usted y su *team* pueden definir para recopilar *learnings* sobre si los límites elegidos de su `bounded context` son adecuados o no.
+
+Puede recopilar esas `metrics`, por ejemplo, desde:
+
+- Sus *CI / CD environments*.
+- Herramientas como JIRA.
+- Desde sus *live systems*.
 
 ### Open Questions
-If you have questions that no one in the room can answer while running a workshop you can enter them into this section of the canvas. This way you can make sure that no open questions get lost but you can also get a visual indicator how certain the team is regarding the design of a given bounded context. Many questions are a good indicator towards a high degree of uncertainty.
+
+Si tiene preguntas que nadie en la sala puede responder mientras se lleva a cabo un *workshop*, puede ingresarlas en esta sección del `canvas`. De esta manera, puede asegurarse de que no se pierda ningun `open questions`, pero también puede obtener un indicador visual de cuán seguro está el equipo con respecto al diseño de un `bounded context` determinado. Muchas `questions` son un buen indicador de un alto grado de incertidumbre.
 
 ## Example
-Below a filled-in version of the Bounded Context Canvas.
-![BCExample](resources/BCCanvasExample.jpg)
 
-## Tools
-Here are some tools that can help you to use the Bounded Context Canvas.
+A continuación, se muestra una versión completa del `Bounded Context Canvas`.
 
-### HTML Version
-A [HTML version of the canvas](tools/html-version/README.md) you can edit in a browser and version in source control alongside your code. Contributed by [Nelson da Costa](https://github.com/baruica).
+![BCExample](assets/BCCanvasExample.jpg)
 
 ### Miro Version
 A free [MiroHQ template](https://miro.com/miroverse/category/newly-added/the-bounded-context-canvas) of the Bounded Context Canvas.
 
 The current version of the template on Miroverse is v4 at the moment. In the meantime, you can download a Miro board backup [here from this repository](resources/bounded-context-canvas-v5-miro.rtb)
-
-### draw.io Version
-A [draw.io template of the canvas](tools/drawio-svg-version/README.md) containing the Bounded Context Canvas as template.
-
-### Excalidraw Version
-A [Excalidraw template of the canvas](tools/excalidraw-version/README.md) containing the Bounded Context Canvas as template.
-
-## Design Tips
-
-By making the important elements of a bounded context's design visible on the canvas, you can more easily challenge and improve the design. Here are some tips help you challenge and improve a design.
-
-> Please feel free to create a Pull Request sharing your tips.
-
-### General Tips
-
-1. Experiment by moving something on the canvas to another context. How is the design affected?
-
-### Interface Design Tips
-
-The public interface of a bounded context is its contract with the rest of the system. Contracts have a big impact on collaborators and are hard to change, so good design is vital. Here are some tips to help you critique the design of a bounded context's interface.
-
-1. Are the names of messages coherent with each other and the description of the context?
-2. Is each message type optimal (e.g. should a command be an event)?
-3. Is the interface too big (too many unique message types)?
-4. Is the context exposing too much of its internals?
-5. Do any messages seem like they should belong elsewhere?
-
-
-## Additional Resources
-
-- [Bounded Context Canvas V3: Simplifications and Additions](https://medium.com/nick-tune-tech-strategy-blog/bounded-context-canvas-v2-simplifications-and-additions-229ed35f825f)
-
-- [Extending the Bounded Context Canvas with BDD Examples](https://xebia.com/blog/extending-the-bounded-context-canvas-with-bdd-examples/)
-
-## Translations
-
-All resources are available [in French](translations/fr/resources) and in [Portuguese](/translations/pt/resources).
-
-## Contributors
-
-Thanks to all [existing and future contributors](https://github.com/ddd-crew/bounded-context-canvas/graphs/contributors) and to the following individuals who have all contributed to the Bounded Context Canvas:
-
-- [Kenny Baas](https://github.com/Baasie)
-- [Kim Lindhard](https://github.com/kim-lindhard-dfds)
-- [Michael Plöd](https://github.com/mploed)
-- [Maxime Sanglan-Charlier](https://twitter.com/__maxs__)
-
-A significant contribution to the Bounded Context Canvas was the inspiration of the [Business Model Canvas](https://www.strategyzer.com/canvas/business-model-canvas).
-
-## Contributions and Feedback
-
-The Bounded Context Canvas is freely available for you to use. In addition, your feedback and ideas are welcome to improve the canvas or to create new versions. 
-
-Feel free to also send us a pull request with your examples or with new translations.
-
-[![CC BY 4.0][cc-by-shield]][cc-by]
-
-This work is licensed under a [Creative Commons Attribution 4.0 International
-License][cc-by].
-
-[![CC BY 4.0][cc-by-image]][cc-by]
-
-[cc-by]: http://creativecommons.org/licenses/by/4.0/
-[cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
-[cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
