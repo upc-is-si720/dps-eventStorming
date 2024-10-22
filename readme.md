@@ -7,3 +7,7 @@
 
 - [Guide Bounded Context Canvas](Bounded-Context-Canvas.md)
 
+## Domain Message Flow Modelling
+
+- [Guide Domain Message Flow Modelling](domain-message-flow-modelling.md)
+
