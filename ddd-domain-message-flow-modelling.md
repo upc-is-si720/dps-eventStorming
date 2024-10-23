@@ -19,24 +19,24 @@ El beneficio de este formato es que puede concentrarse en el flujo de `message` 
 Comience mostrando sólo los `message` que fluyen entre _senders_ y _receivers_ (con el número de orden en el `message`).
 
 
-![Message Flow Just Messages](resources/just-messages-no-contents.jpg)
+![Message Flow Just Messages](assets/images/message/just-messages-no-contents.jpg)
 
 A continuación, muestra el contenido de cada `message` en un cuadro separado al lado de cada `message`:
 
-![Message Flow Messages & Contents](resources/messages-and-contents.jpg)
+![Message Flow Messages & Contents](assets/images/message/messages-and-contents.jpg)
 
 ### Combined Message & Contents
 
 El formato combinado de `message` y contenido utiliza una única forma para capturar el _name_, _order_, y _contents_. del `message`.
 
-![Example Message Flow](resources/domain-message-flow.jpg "An Example Domain Message Flow")
+![Example Message Flow](assets/images/message/domain-message-flow.jpg "An Example Domain Message Flow")
 
 Este formato es bueno cuando quieres centrarte en el contenido de cada `message` desde el principio.
 
 
 ### Downloads
 
-- [Domain Message Flow Modelling (miro board backup)](resources/Domain-Message-Flow-Modelling-en-v1.rtb)
+- [Domain Message Flow Modelling (miro board backup)](assets/miro/Domain-Message-Flow-Modelling-en-v1.rtb)
 
 ## How to Use
 
@@ -60,7 +60,7 @@ El `message` debe contener 3 elementos:
 
 Nota: En el caso de un `query`, la _response_ es tan importante como la _request_. La información se puede ver y representar como una unidad, como esta:
 
-<img src="resources/query-req-resp.png" alt="Message as a query" width="250" height="auto">
+<img src="assets/images/message/query-req-resp.png" alt="Message as a query" width="250" height="auto">
 
 ## Visualisation Tips
 
@@ -72,7 +72,7 @@ Si descubre que añadir datos a cada `message` interrumpe el flujo de progreso, 
 
 A veces, los `messages` dependen del tiempo. Por ejemplo, escenario: _cancelar un pedido en línea después de 5 minutos de inactividad_. Una visualización como esta podría funcionar bien. Es importante prestar atención a la semántica: _dentro de_, _después_ o _cada 5 minutos_ son condiciones muy diferentes.
 
-<img src="resources/time-dependent-message.png" alt="Time-dependent Message" width="80%" height="auto">
+<img src="assets/images/message/time-dependent-message.png" alt="Time-dependent Message" width="80%" height="auto">
 
 
 ## Additional Resources

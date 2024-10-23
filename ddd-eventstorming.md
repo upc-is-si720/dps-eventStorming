@@ -14,7 +14,7 @@ Un _EventStorming workshop_ se lleva a cabo generalmente en 10 pasos. Durante ca
 
 EventStorming comienza con una lluvia de ideas sobre los `domain events` relacionados con el _business domain_ que se está explorando. Un **domain events** es algo interesante que ha sucedido en el _business_. Es importante formular los `domain events` en tiempo pasado; describen cosas que ya sucedieron.
 
-![Unstructured Exploration](/assets/images/lddd_1202.png) 
+![Unstructured Exploration](/assets/images/eventstorming/eventstorming/lddd_1202.png) 
 
 Durante este paso, todos los participantes toman un montón de notas adhesivas de color ***naranja***, escriben los `domain events` que se les ocurren y los pegan en la superficie de modelado.
 
@@ -30,7 +30,7 @@ Los events deben comenzar con el "_happy path scenario_": el flujo que describe 
 
 Una vez que se ha realizado el "_happy path_", se pueden agregar _alternative scenarios_, por ejemplo, rutas en las que se encuentran errores o se toman decisiones empresariales diferentes. La ramificación del flujo se puede expresar como dos flujos que provienen del evento anterior o con flechas dibujadas en la superficie de modelado, como se muestra a continuación:
 
-![happy path scenario](/assets/images/lddd_1203.png) 
+![happy path scenario](/assets/images/eventstorming/lddd_1203.png) 
 
 Este paso también es el momento de corregir `events` incorrectos, eliminar duplicados y, por supuesto, agregar `events` faltantes si es necesario.
 
@@ -40,7 +40,7 @@ Una vez que haya organizado los `events` en un `timeline`, use esta vista amplia
 
 Es importante hacer explícitas estas ineficiencias para que sea fácil volver a ellas a medida que avanza la sesión de _EventStorming_ o abordarlas después. Los **Pain Points** están marcados con notas adhesivas ***rosas*** rotadas (en forma de diamante), como se ilustra a continuación.
 
-![Pain Points](/assets/images/lddd_1204.png) 
+![Pain Points](/assets/images/eventstorming/lddd_1204.png) 
 
 Por supuesto, este paso no es la única oportunidad para hacer un seguimiento de los `pain points`. Como facilitador, tenga en cuenta los comentarios de los participantes durante todo el proceso. Cuando surja un problema o una inquietud, documéntelo como un `pain points`.
 
@@ -50,7 +50,7 @@ Una vez que tenga un `timeline` de `events` ampliada con `pain points`, busque *
 
 Por ejemplo, “_shopping cart initialized_”, “_order initialized_”, “_order shipped”, “_order delivered_” y “_order returned_” representan cambios significativos en el proceso de realización de un pedido, como se muestra a continuación:
 
-![Pivotal Events](/assets/images/lddd_1205.png) 
+![Pivotal Events](/assets/images/eventstorming/lddd_1205.png) 
 
 Los `pivotal events` son un indicador de posibles ***bounded context*** delimitados.
 
@@ -66,7 +66,7 @@ Mientras que un `domain event` describe algo que ya sucedió, un **command** des
 
 Los `commands` se escriben en notas adhesivas de color ***azul claro*** y se colocan en el espacio de modelado antes de los eventos que pueden producir. Si un `actor` ejecuta un `command` en particular en un rol específico, la información del `actor` se agrega al `command` en una pequeña nota adhesiva ***amarilla***, como se ilustra a continuación. 
 
-![Commands](/assets/images/lddd_1206.png) 
+![Commands](/assets/images/eventstorming/lddd_1206.png) 
 
 El `actor` representa una personalidad de usuario dentro del _business domain_, como cliente, administrador o editor.
 
@@ -81,7 +81,7 @@ Una **automation policy** es un escenario en el que un evento activa la ejecuci�
 
 En la superficie de modelado, las `policies` se representan como notas adhesivas de color ***púrpura*** que conectan `events` a `commands`, como se muestra a continuación en la nota adhesiva “_Policy_”.
 
-![Policies](/assets/images/lddd_1207.png) 
+![Policies](/assets/images/eventstorming/lddd_1207.png) 
 
 Un `automation policy` que activa el `command` “_Ship Order_” cuando se observa el evento “_Shipment Approved_”.
 
@@ -96,7 +96,7 @@ Un **read model** es la vista de datos dentro del _domain_ que el `actor` usa pa
 
 Los `read models` están representados por notas adhesivas ***verdes*** con una breve descripción de la fuente de información necesaria para respaldar la decisión del `actor`. Dado que un `command` se ejecuta después de que el `actor` haya visto el `read model`, en la superficie de modelado los `read models` se posicionan antes de los comandos.
 
-![Policies](/assets/images/lddd_1208.png) 
+![Policies](/assets/images/eventstorming/lddd_1208.png) 
 
 ### Paso 8: External Systems (Sistemas externos)
 
@@ -104,7 +104,7 @@ Este paso trata de aumentar el modelo con `external systems`. Un **external syst
 
 Los `external systems` están representados por notas adhesivas ***rosas***. En la siguiente figura, el _CRM_ (`external systems`) activa la ejecución del `command` “_Ship Order_”. Cuando el _shipment is approved_ (`event`), se comunica al _CRM_ (`external systems`) a través de una `policy`.
 
-![External Systems](/assets/images/lddd_1209.png) 
+![External Systems](/assets/images/eventstorming/lddd_1209.png) 
 
 Al final de este paso, todos los `commands` deben ser ejecutados por `actors`, activados por `policies` o llamados por `external systems`.
 
@@ -115,20 +115,20 @@ Una vez que todos los `events` y `commands` están representados, los participan
 
 Los `Aggregates` se representan como notas adhesivas ***amarillas*** grandes, con `commands` a la izquierda y `events` a la derecha, como se muestra a continuación:
 
-![Aggregates](/assets/images/lddd_1210.png) 
+![Aggregates](/assets/images/eventstorming/lddd_1210.png) 
 
 
 ### Paso 10: Bounded Contexts (Contextos delimitados)
 
 El último paso de una sesión de `EventStorming` es buscar `aggregates` que estén relacionados entre sí, ya sea porque representan una funcionalidad estrechamente relacionada o porque están acoplados a través de `policies`. Los grupos de `aggregates` forman candidatos naturales para los límites de los `bounded contexts`, como se muestra a continuación.
 
-![Aggregates](/assets/images/lddd_1211.png) 
+![Aggregates](/assets/images/eventstorming/lddd_1211.png) 
 
 ### Leyenda
 
 A continuación de muestra la leyenda de las notas adhesivas utilizadas en _EventStorming_:
 
-![Legend](/assets/images/lddd_1212.png) 
+![Legend](/assets/images/eventstorming/lddd_1212.png) 
 
 
 ## Variantes
