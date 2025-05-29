@@ -14,7 +14,7 @@ Un _EventStorming workshop_ se lleva a cabo generalmente en 10 pasos. Durante ca
 
 EventStorming comienza con una lluvia de ideas sobre los `domain events` relacionados con el _business domain_ que se está explorando. Un **domain events** es algo interesante que ha sucedido en el _business_. Es importante formular los `domain events` en tiempo pasado; describen cosas que ya sucedieron.
 
-![Unstructured Exploration](/assets/images/eventstorming/eventstorming/lddd_1202.png) 
+![Unstructured Exploration](/assets/images/eventstorming/lddd_1202.png) 
 
 Durante este paso, todos los participantes toman un montón de notas adhesivas de color ***naranja***, escriben los `domain events` que se les ocurren y los pegan en la superficie de modelado.
 
